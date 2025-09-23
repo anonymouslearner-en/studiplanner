@@ -1,3 +1,7 @@
+/**
+ * @file    Types
+ */
+
 type tCompleted = "succeeded" | "failed";
 
 interface MetaData {
