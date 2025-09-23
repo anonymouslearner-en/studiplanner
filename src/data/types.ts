@@ -9,8 +9,6 @@ interface MetaData {
   updatedAt?: Date;
 }
 
-//ToDo Remove
-
 /* ==================================
                 EXAM
 ===================================== */
