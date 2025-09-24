@@ -1,5 +1,5 @@
 /**
- * @file    Types
+ * @file    Exams
  */
 
 type tCompleted = "succeeded" | "failed";
@@ -38,12 +38,4 @@ export interface Exam {
   details: ExamData;
   topics: Topic[];
   metadata: MetaData;
-}
-
-/* ==================================
-                LAB
-===================================== */
-export interface Lab {
-  name: string;
-  state: "pending" | "";
 }
