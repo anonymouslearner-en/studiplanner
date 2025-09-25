@@ -2,7 +2,13 @@
  * @file    Exams
  */
 
-type tCompleted = "succeeded" | "failed";
+export type tCompleted = "Succeeded" | "Failed";
+export type tPrepStatus =
+  | "Not Started"
+  | "In Progress"
+  | "Well Prepared"
+  | "Ready";
+export type tState = "Scheduled" | "Coming Soon" | tCompleted;
 
 interface MetaData {
   createdAt: Date;
@@ -24,18 +30,17 @@ interface ExamData {
 export interface Topic {
   name: string;
   id: string;
-  state: "pending" | "learning" | "reviewing" | "exam questions";
-  actions: null;
-  difficultyLevel: "easy" | "moderate" | "diffucult" | "endgame";
+  prepStatus: tPrepStatus;
+  difficultyLevel: "Easy" | "Moderate" | "Difficult" | "Endgame";
   relevance: "explicitly not coming" | "could appear" | "focus";
 }
 
 export interface Exam {
   name: string;
   id: string;
-  state: "pending" | "ongoing" | tCompleted;
-  actionFlags: "forget it" | "work hard" | "good";
+  state: tState;
+  prepStatus: tPrepStatus;
   details: ExamData;
   topics: Topic[];
-  metadata: MetaData;
+  metaData: MetaData;
 }
