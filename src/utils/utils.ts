@@ -1,5 +1,7 @@
 import type { Exam, tPrepStatus } from "../types/exam";
 import type { Lab } from "../types/lab";
+import { clsx, type ClassValue } from "clsx";
+import { twMerge } from "tailwind-merge";
 
 export type sortCriteria = "Date" | "Preparation";
 export type sortOrder = "Ascending" | "Descending";
@@ -8,6 +10,10 @@ export type ViewMode = "Chronological" | "Grouped";
 interface sortProps {
   sortBy: sortCriteria;
   order: sortOrder;
+}
+
+export function cn(...inputs: ClassValue[]) {
+  return twMerge(clsx(inputs));
 }
 
 export const sortItems = (
