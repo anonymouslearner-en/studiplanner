@@ -1,5 +1,6 @@
 import type { FC } from "react";
 import type { Exam } from "../types/exam";
+import { Progress } from "../../components/ui/progress";
 
 interface Props {
   exam: Exam;
@@ -160,36 +161,7 @@ export const ExamTile: FC<Props> = ({ exam }) => {
 
         {/* Status Badge */}
         <div className="flex justify-between items-center">
-          <div
-            className={`inline-flex items-center px-3 py-1.5 rounded-lg text-sm font-medium ${getStatusStyle(
-              exam.prepStatus
-            )}`}
-          >
-            {exam.prepStatus}
-          </div>
-
-          {/* Progress Indicator */}
-          <div className="flex items-center space-x-1">
-            {[1, 2, 3, 4].map((step) => (
-              <div
-                key={step}
-                className={`w-1.5 h-1.5 rounded-full ${
-                  (exam.prepStatus === "Ready" && step <= 4) ||
-                  (exam.prepStatus === "Well Prepared" && step <= 3) ||
-                  (exam.prepStatus === "In Progress" && step <= 2) ||
-                  (exam.prepStatus === "Not Started" && step <= 1)
-                    ? getStatusStyle(exam.prepStatus).includes("emerald")
-                      ? "bg-emerald-500"
-                      : getStatusStyle(exam.prepStatus).includes("blue")
-                      ? "bg-blue-600"
-                      : getStatusStyle(exam.prepStatus).includes("amber")
-                      ? "bg-amber-500"
-                      : "bg-slate-400"
-                    : "bg-gray-200"
-                }`}
-              />
-            ))}
-          </div>
+          <Progress value={80} />
         </div>
       </div>
     </div>
