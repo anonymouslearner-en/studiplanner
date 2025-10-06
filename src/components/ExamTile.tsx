@@ -48,7 +48,7 @@ export const ExamTile: FC<Props> = ({ exam }) => {
 
   return (
     <div
-      className={`group bg-accent-100 rounded-xl transition-all duration-200 overflow-hidden shadow-sm`}
+      className={`group bg-accent-100 rounded-sm transition-all duration-200 overflow-hidden shadow-sm`}
     >
       {/* Header Section */}
       <div className="px-6 pt-6 pb-4">
