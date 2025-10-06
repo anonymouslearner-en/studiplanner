@@ -48,9 +48,7 @@ export const ExamTile: FC<Props> = ({ exam }) => {
 
   return (
     <div
-      className={`group bg-gray-50/50 rounded-2xl shadow-sm hover:shadow-lg border border-gray-100 hover:border-gray-200 transition-all duration-200 overflow-hidden ${getCardAccent(
-        exam.prepStatus
-      )} border-l-4`}
+      className={`group bg-accent-100 rounded-xl transition-all duration-200 overflow-hidden shadow-sm`}
     >
       {/* Header Section */}
       <div className="px-6 pt-6 pb-4">

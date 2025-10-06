@@ -9,7 +9,7 @@ function App() {
   return (
     <>
       <Navbar />
-      <main className="min-h-screen bg-white overflow-x-hidden flex flex-col">
+      <main className="min-h-screen bg-accent-300 overflow-x-hidden flex flex-col">
         <div className="w-full max-w-5xl mx-auto pt-5 px-4 mb-28">
           <h1>Hello</h1>
           <ComingUpSection />
