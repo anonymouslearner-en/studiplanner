@@ -20,20 +20,21 @@ const getStatusStyle = (status: string) => {
   }
 };
 
-const getCardAccent = (prepStatus: string) => {
-  switch (prepStatus) {
-    case "Ready":
-      return "border-l-emerald-500";
-    case "Well Prepared":
-      return "border-l-blue-600";
-    case "In Progress":
-      return "border-l-amber-500";
-    case "Not Started":
-      return "border-l-slate-400";
-    default:
-      return "border-l-slate-400";
-  }
-};
+//ToDo Refactor (design changes)
+// const getCardAccent = (prepStatus: string) => {
+//   switch (prepStatus) {
+//     case "Ready":
+//       return "border-l-emerald-500";
+//     case "Well Prepared":
+//       return "border-l-blue-600";
+//     case "In Progress":
+//       return "border-l-amber-500";
+//     case "Not Started":
+//       return "border-l-slate-400";
+//     default:
+//       return "border-l-slate-400";
+//   }
+// };
 
 export const ExamTile: FC<Props> = ({ exam }) => {
   const formatDate = (date: Date) => {
