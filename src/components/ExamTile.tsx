@@ -7,20 +7,21 @@ interface Props {
   exam: Exam;
 }
 
-const getStatusStyle = (status: string) => {
-  switch (status) {
-    case "Ready":
-      return "bg-emerald-500 text-white";
-    case "Well Prepared":
-      return "bg-blue-600 text-white";
-    case "In Progress":
-      return "bg-amber-500 text-white";
-    case "Not Started":
-      return "bg-slate-400 text-white";
-    default:
-      return "bg-slate-400 text-white";
-  }
-};
+//ToDo Refactor (design changes)
+// const getStatusStyle = (status: string) => {
+//   switch (status) {
+//     case "Ready":
+//       return "bg-emerald-500 text-white";
+//     case "Well Prepared":
+//       return "bg-blue-600 text-white";
+//     case "In Progress":
+//       return "bg-amber-500 text-white";
+//     case "Not Started":
+//       return "bg-slate-400 text-white";
+//     default:
+//       return "bg-slate-400 text-white";
+//   }
+// };
 
 //ToDo Refactor (design changes)
 // const getCardAccent = (prepStatus: string) => {
