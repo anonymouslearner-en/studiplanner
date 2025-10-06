@@ -1,6 +1,7 @@
 import type { FC } from "react";
 import type { Exam } from "../types/exam";
 import { ExamTile } from "./ExamTile";
+import { AddExamTile } from "./AddExamTile";
 
 interface Props {
   exams: Exam[];
@@ -18,6 +19,8 @@ export const OverviewSection: FC<Props> = ({ exams }) => {
           {exams.map((exam) => (
             <ExamTile key={exam.id} exam={exam} />
           ))}
+
+          <AddExamTile />
         </div>
       </div>
     </div>
