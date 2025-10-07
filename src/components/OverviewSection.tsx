@@ -22,7 +22,9 @@ export const OverviewSection: FC<Props> = ({ exams }) => {
       </h2>
 
       <div className="min-h-10 w-full mb-4 flex flex-row justify-end">
-        //ToDo add Form
+        {
+          //ToDo add Form
+        }
         <OverviewFilter currentSetting={settings} />
       </div>
 
