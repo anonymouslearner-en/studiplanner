@@ -7,7 +7,7 @@ export type sortCriteria = "Date" | "Preparation";
 export type sortOrder = "Ascending" | "Descending";
 export type ViewMode = "Chronological" | "Grouped";
 
-interface sortProps {
+export interface sortProps {
   sortBy: sortCriteria;
   order: sortOrder;
 }
