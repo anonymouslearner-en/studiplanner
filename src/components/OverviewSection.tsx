@@ -10,7 +10,7 @@ interface Props {
 }
 
 export const OverviewSection: FC<Props> = ({ exams }) => {
-  const [settings, setSettings] = useState<sortProps>({
+  const [settings] = useState<sortProps>({
     sortBy: "Date",
     order: "Ascending",
   });
