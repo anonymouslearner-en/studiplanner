@@ -2,6 +2,14 @@ import type { FC } from "react";
 import type { Exam } from "../types/exam";
 import { Progress } from "../../components/ui/progress";
 import { ExamTileActionButton } from "./ETActionButton";
+import {
+  Dialog,
+  DialogContent,
+  DialogDescription,
+  DialogHeader,
+  DialogTitle,
+  DialogTrigger,
+} from "../../components/ui/dialog";
 
 interface Props {
   exam: Exam;
@@ -124,26 +132,42 @@ export const ExamTile: FC<Props> = ({ exam }) => {
           <Progress value={80} />
 
           {/* Action Buttons */}
+          {
+            //ToDo: Visual Refactoring (fix global black button!)
+          }
           <div className="w-full  flex flex-row justify-end ml-2 mt-2">
-            <ExamTileActionButton
-              title="Edit exam"
-              action={() => console.log("Edit exam:", exam.id)}
-              icon={
-                <svg
-                  className="w-3.5 h-3.5"
-                  fill="none"
-                  stroke="black"
-                  viewBox="0 0 24 24"
-                >
-                  <path
-                    strokeLinecap="round"
-                    strokeLinejoin="round"
-                    strokeWidth={1.5}
-                    d="M11 5H6a2 2 0 00-2 2v11a2 2 0 002 2h11a2 2 0 002-2v-5m-1.414-9.414a2 2 0 112.828 2.828L11.828 15H9v-2.828l8.586-8.586z"
-                  />
-                </svg>
-              }
-            />
+            <Dialog>
+              <DialogTrigger className="!bg-transparent">
+                <ExamTileActionButton
+                  title="Edit exam"
+                  action={() => console.log("Edit exam:", exam.id)}
+                  icon={
+                    <svg
+                      className="w-3.5 h-3.5"
+                      fill="none"
+                      stroke="black"
+                      viewBox="0 0 24 24"
+                    >
+                      <path
+                        strokeLinecap="round"
+                        strokeLinejoin="round"
+                        strokeWidth={1.5}
+                        d="M11 5H6a2 2 0 00-2 2v11a2 2 0 002 2h11a2 2 0 002-2v-5m-1.414-9.414a2 2 0 112.828 2.828L11.828 15H9v-2.828l8.586-8.586z"
+                      />
+                    </svg>
+                  }
+                />
+              </DialogTrigger>
+
+              <DialogContent className="min-h-4/6 min-w-4/6">
+                <DialogHeader>
+                  <DialogTitle className="text-2xl font-semibold">
+                    {exam.name}
+                  </DialogTitle>
+                  <DialogDescription>Lorem Ipsum</DialogDescription>
+                </DialogHeader>
+              </DialogContent>
+            </Dialog>
 
             <ExamTileActionButton
               title="Delete exam"
