@@ -5,7 +5,8 @@ interface Props {
   footer: ReactNode;
   header: ReactNode;
 }
-
+//ToDo add minimal SEO (FavIcon + Meta tags)
+//ToDo shift styling logic here
 export const PageLayout: FC<Props> = ({ content, footer, header }) => {
   return (
     <main>
