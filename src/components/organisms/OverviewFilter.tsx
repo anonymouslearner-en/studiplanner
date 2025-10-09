@@ -6,8 +6,8 @@ import {
   // DropdownMenuLabel,
   // DropdownMenuSeparator,
   DropdownMenuTrigger,
-} from "../../components/ui/dropdown-menu";
-import type { sortProps } from "../utils/utils";
+} from "../../../components/ui/dropdown-menu";
+import type { sortProps } from "../../utils/utils";
 
 interface Props {
   currentSetting: sortProps;

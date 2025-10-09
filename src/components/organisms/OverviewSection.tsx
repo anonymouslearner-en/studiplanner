@@ -1,9 +1,9 @@
 import { useState, type FC } from "react";
-import type { Exam } from "../types/exam";
-import { ExamTile } from "./ExamTile";
+import type { Exam } from "../../types/exam";
+import { ExamTile } from "../molecules/ExamTile";
 import { AddExamTile } from "./AddExamTile";
 import { OverviewFilter } from "./OverviewFilter";
-import type { sortProps } from "../utils/utils";
+import type { sortProps } from "../../utils/utils";
 
 interface Props {
   exams: Exam[];

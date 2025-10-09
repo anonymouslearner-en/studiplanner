@@ -1,7 +1,7 @@
 import type { FC } from "react";
-import type { Exam } from "../types/exam";
-import { Progress } from "../../components/ui/progress";
-import { ExamTileActionButton } from "./ETActionButton";
+import type { Exam } from "../../types/exam";
+import { Progress } from "../../../components/ui/progress";
+import { ExamTileActionButton } from "../atoms/ETActionButton";
 import {
   Dialog,
   DialogContent,
@@ -9,7 +9,7 @@ import {
   DialogHeader,
   DialogTitle,
   DialogTrigger,
-} from "../../components/ui/dialog";
+} from "../../../components/ui/dialog";
 
 interface Props {
   exam: Exam;

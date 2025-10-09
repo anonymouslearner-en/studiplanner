@@ -1,8 +1,8 @@
 import "./App.css";
-import { ComingUpSection } from "./components/ComingUpSection";
-import { Footer } from "./components/Footer";
-import { Navbar } from "./components/Navbar";
-import { OverviewSection } from "./components/OverviewSection";
+import { ComingUpSection } from "./components/organisms/ComingUpSection";
+import { Footer } from "./components/layout/Footer";
+import { Navbar } from "./components/layout/Navbar";
+import { OverviewSection } from "./components/organisms/OverviewSection";
 import { mockExams } from "./mocks/mock";
 
 function App() {
