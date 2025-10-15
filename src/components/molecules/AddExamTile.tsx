@@ -9,11 +9,11 @@ import {
 } from "../../../components/ui/dialog";
 
 /**
- * @name AddExamTile
+ * @name AddItemTile
  *
  * @brief
  */
-export const AddExamTile: FC = () => {
+export const AddItemTile: FC = () => {
   return (
     <div className="bg-accent-100 rounded-sm border-dashed border-2 border-neutral-400 flex items-center justify-center cursor-pointer overflow-hidden">
       <Dialog>

@@ -3,7 +3,7 @@ import type { Exam } from "../../types/exam";
 import { ExamTile } from "../molecules/ExamTile";
 import { OverviewFilter } from "./OverviewFilter";
 import type { sortProps } from "../../utils/utils";
-import { AddExamTile } from "../molecules/AddExamTile";
+import { AddItemTile } from "../molecules/AddExamTile";
 
 interface Props {
   exams: Exam[];
@@ -34,7 +34,7 @@ export const OverviewSection: FC<Props> = ({ exams }) => {
             <ExamTile key={exam.id} exam={exam} />
           ))}
 
-          <AddExamTile />
+          <AddItemTile />
         </div>
       </div>
     </div>
