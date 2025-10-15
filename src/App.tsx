@@ -15,12 +15,13 @@ const App = () => {
   const { exams, updateExams } = useExamData();
 
   useEffect(() => {
-    // Initialize if empty
     if (!user.name) {
       updateUser({
-        name: "Max Mustermann",
-        degree: "BaTIN",
+        name: undefined,
+        degree: undefined,
         semester: 1,
+        firstVisitComplete: false,
+        isRegistered: false,
       });
     }
 
@@ -34,7 +35,7 @@ const App = () => {
       <Page header={<Navbar />} footer={<Footer />}>
         <section className="w-full max-w-5xl mx-auto pt-5 px-4 mb-28">
           <h1 className="text-white font-medium text-base mb-4">
-            {`Hello ${user.name}`}
+            {`Hello ${user.name != undefined ? user.name : "Stranger"}`}
           </h1>
           <ComingUpSection />
           <OverviewSection exams={exams} />

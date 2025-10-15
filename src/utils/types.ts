@@ -5,7 +5,8 @@ export interface User {
   name: string | undefined;
   degree: string | undefined;
   semester: number;
-  onboardingComplete: boolean;
+  firstVisitComplete: boolean;
+  isRegistered: boolean;
   //   preferences: UserPreferences;
 }
 

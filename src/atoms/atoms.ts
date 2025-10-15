@@ -9,7 +9,8 @@ export const userAtom = atomWithStorage<User>("user", {
   name: undefined,
   degree: undefined,
   semester: 1,
-  onboardingComplete: false,
+  firstVisitComplete: false,
+  isRegistered: false,
   //   preferences: {}
 });
 
