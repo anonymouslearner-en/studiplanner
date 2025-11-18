@@ -4,6 +4,7 @@ import * as AlertDialogPrimitive from "@radix-ui/react-alert-dialog";
 import { cn } from "../../src/utils/utils";
 import { buttonVariants } from "./button";
 
+//ToDo Generate Script to shift new shadcn components into src folder!
 function AlertDialog({
   ...props
 }: React.ComponentProps<typeof AlertDialogPrimitive.Root>) {
