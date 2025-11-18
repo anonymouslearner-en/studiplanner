@@ -9,6 +9,7 @@ import { Provider } from "jotai";
 import { useEffect } from "react";
 import { useUserData } from "./hooks/useUserData";
 import { useExamData } from "./hooks/useExamData";
+import { OnboardingForm } from "./forms/OnboardingForm";
 
 const App = () => {
   const { user, updateUser } = useUserData();
@@ -41,6 +42,8 @@ const App = () => {
           <OverviewSection exams={exams} />
         </section>
       </Page>
+
+      <OnboardingForm />
     </Provider>
   );
 };

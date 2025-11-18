@@ -4,6 +4,8 @@
  * @author Clinton Mzee
  */
 
+import { AlertDialog } from "../../components/ui/alert-dialog";
+
 // export const OnboardingForm: FC
 
 // STEP ONE
@@ -21,3 +23,11 @@
 // STEP FOUR (Optional)
 // Select Retakes or Antizyklische Exams
 // If Not exit (and take current settings)!
+
+export const OnboardingForm = () => {
+  return (
+    <>
+      <AlertDialog></AlertDialog>
+    </>
+  );
+};
